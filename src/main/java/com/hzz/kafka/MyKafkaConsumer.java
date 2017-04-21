@@ -23,7 +23,7 @@ public class MyKafkaConsumer {
         props.put("client.id", "test-client");
         props.put("group.id", "test-group");
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<String, String>(props);
-        kafkaConsumer.subscribe(Lists.newArrayList("test"));
+        kafkaConsumer.subscribe(Lists.newArrayList("test2"));
         while(true) {
             ConsumerRecords<String, String> records = kafkaConsumer.poll(30000);
             for (ConsumerRecord<String, String> r : records) {
